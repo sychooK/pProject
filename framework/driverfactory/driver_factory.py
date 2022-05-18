@@ -4,13 +4,9 @@ from framework.driverfactory.firefox_driver import FirefoxDriver
 
 
 class DriverFactory:
-
-    def __init__(self):
-        super
-
     @staticmethod
     def get_driver(browser):
         if browser == 'Chrome':
-            return ChromeDriver()
+            return ChromeDriver().driver
         elif browser == 'Firefox':
-            return FirefoxDriver()
+            return FirefoxDriver().driver
